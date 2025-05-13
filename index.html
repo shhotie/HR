@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HR Interview Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .section-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .section-title {
+            margin-top: 30px;
+            color: #007BFF;
+            font-size: 20px;
+        }
+
+        .question {
+            cursor: pointer;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .answer {
+            display: none;
+            background-color: #e9ecef;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .section-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>HR Interview Questions</h1>
+
+    <div class="section-container">
+        <!-- Column 1 -->
+        <div class="section">
+            <div class="section-title">✅ Behavioral & Situational Questions</div>
+            <div class="qa">
+                <div class="question" onclick="toggleAnswer(this)">Tell me about yourself and your current role.</div>
+                <div class="answer">
+                    <p>Hi, I’m <strong>Swati Wanjari</strong>. I have over <strong>4 years of experience in Java
+                            development</strong>,
+                        mainly focused on building scalable web applications and microservices using <strong>Java 8,
+                            Spring Boot, and
+                            REST APIs</strong>. I’ve worked across domains like regulatory compliance, credit
+                        processing, and medical
+                        staffing platforms.</p>
+
+                    <p>Recently, I worked on the <strong>SmartReg project at Smarbl Limited</strong> — it’s a
+                        cloud-based regulatory
+                        compliance platform where I developed RESTful APIs, implemented custom workflows, and
+                        contributed to secure
+                        deployments using <strong>Docker and Jenkins</strong>. I also collaborated on Angular components
+                        for front-end
+                        integration.</p>
+
+                    <p>I follow <strong>Agile practices</strong> and contribute to end-to-end development — from
+                        designing APIs to
+                        deploying production-ready features. I’m now looking for opportunities where I can further grow
+                        as a
+                        <strong>full-stack or backend developer</strong> while contributing to impactful products.
+                    </p>
+                </div>
+
+                <div class="question" onclick="toggleAnswer(this)">Can you describe a challenging situation in your
+                    project and how you resolved it?</div>
+                <div class="answer">
+                    <p>Yes, one challenging situation I faced was during the development of the report cloning feature
+                        in the SmartReg
+                        project. The requirement was to allow users to duplicate an existing regulatory report—along
+                        with all its
+                        sections, rules, and metadata—so they could reuse it for the next period.</p>
+
+                    <p>The challenge came when cloning reports that had complex nested relationships, like validation
+                        rules linked to
+                        specific sections, and user permissions tied to those sections. Initially, our clone logic was
+                        copying only the
+                        top-level report structure but missed these linked entities. This led to broken references and
+                        missing data in
+                        the cloned reports, which affected user experience.</p>
+
+                    <p><strong>To resolve this:</strong></p>
+                    <ul>
+                        <li>I analyzed the entity relationships deeply and updated the clone logic to recursively copy
+                            all dependent
+                            entities, preserving relationships like foreign keys and ownership metadata.</li>
+                        <li>I added transactional handling using <code>@Transactional</code> to ensure either the full
+                            report was cloned
+                            successfully or rolled back in case of an error.</li>
+                        <li>We also implemented proper exception handling and user messages when a clone failed due to
+                            business rules
+                            like duplicate periods.</li>
+                    </ul>
+
+                    <p>After the fix, the cloning feature worked smoothly, reduced manual effort for users, and also
+                        improved trust in
+                        the system.</p>
+                </div>
+
+                <div class="question" onclick="toggleAnswer(this)">Have you ever disagreed with your team lead or
+                    manager? How did you handle it?</div>
+                    <div class="answer">
+                        <p>Yes, I have experienced situations where I had a different viewpoint than my team lead. When that happens, I make
+                            sure to approach it professionally. First, I try to fully understand their perspective, and then I share my own
+                            thoughts with clear reasoning and possible alternatives.</p>
+                    
+                        <p>I believe it's important to focus on the goal of delivering the best solution, not on who is right. If needed, I
+                            support my suggestion with examples, data, or even a quick prototype to make the decision easier.</p>
+                    
+                        <p>In most cases, this open and respectful communication has helped us reach a consensus or even come up with a
+                            better combined approach. I’ve found that healthy technical discussions often lead to stronger outcomes and
+                            better collaboration within the team.</p>
+                    </div>
+                    
+                <div class="question" onclick="toggleAnswer(this)">Describe a time you had to deliver under tight
+                    deadlines.</div>
+                    <div class="answer">
+                        <p>Yes, I’ve faced situations where I had to deliver under tight deadlines, especially during sprint closures or
+                            last-minute change requests from stakeholders.</p>
+                    
+                        <p>One such instance was when we had a high-priority feature that needed to be delivered quickly due to a regulatory
+                            update. The timeline was shorter than usual, and the change involved backend logic and frontend adjustments. I
+                            quickly aligned with the BA to clarify requirements, broke the task into smaller, manageable parts, and
+                            prioritized the critical pieces first.</p>
+                    
+                        <p>I worked with focus, collaborated closely with QA for early feedback, and wrote unit tests alongside development
+                            to save time later. By coordinating efficiently with the team and staying focused, we were able to deliver the
+                            feature within the deadline — without compromising code quality.</p>
+                    
+                        <p>That experience reinforced the importance of clear communication, time management, and staying calm under
+                            pressure.</p>
+                    </div>
+                    
+                <div class="question" onclick="toggleAnswer(this)">Have you mentored junior developers or taken any
+                    leadership responsibilities?</div>
+                    <div class="answer">
+                        <p>Yes, I’ve taken on informal leadership responsibilities in my current role. While I’m not in a formal lead
+                            position, I’ve often guided junior developers, especially when onboarding new team members or during sprint
+                            planning.</p>
+                    
+                        <p>For example, I’ve helped junior teammates understand our codebase structure, shared best practices in REST API
+                            development, and reviewed their code to ensure adherence to coding standards. I also encourage them to write
+                            clean, testable code and explain the reasoning behind design decisions like where to place business logic or how
+                            to structure services.</p>
+                    
+                        <p>These experiences have strengthened my communication and collaboration skills, and I enjoy helping others grow
+                            while also learning through team discussions.</p>
+                    </div>
+                    
+                <div class="question" onclick="toggleAnswer(this)">How do you prioritize tasks when you have multiple
+                    deliverables?</div>
+                    <div class="answer">
+                        <p>When I have multiple deliverables, I prioritize tasks based on urgency, business impact, and dependencies. I
+                            usually start by reviewing the deadlines and identifying which items are time-sensitive or blocking others. Then
+                            I break down larger tasks into smaller, manageable steps and estimate the effort involved.</p>
+                    
+                        <p>If there’s any ambiguity, I clarify priorities with the product owner or team lead to make sure I'm aligned with
+                            the overall goals. I also use tools like JIRA to track progress and make adjustments as needed.</p>
+                    
+                        <p>For example, if I’m working on a feature and a production bug is reported, I’ll assess the severity of the bug.
+                            If it impacts users or system stability, I’ll pause the current task, resolve the issue, and then switch back —
+                            ensuring smooth delivery without compromising quality.</p>
+                    
+                        <p>Staying organized and maintaining open communication with the team helps me manage workload effectively.</p>
+                    </div>
+                    
+                <div class="question" onclick="toggleAnswer(this)">Tell me about a situation where your code caused an
+                    issue in production. How did you handle it?</div>
+                    <div class="answer">
+                        <p>Yes, I believe mistakes are part of learning, and I’ve faced such a situation.</p>
+                    
+                        <p>Once, I had deployed an API enhancement where I added a new field in the response, but I didn’t realize that an
+                            external system was consuming that API and was not expecting the modified structure. After deployment, that
+                            system started throwing errors, and the issue was quickly flagged by QA during post-deployment verification.</p>
+                    
+                        <p>As soon as I was notified, I checked the logs, identified the change, and rolled back the deployment to restore
+                            stability. I then coordinated with the external team to understand their contract expectations and made the
+                            change backward-compatible.</p>
+                    
+                        <p>After that incident, I took extra steps to ensure:</p>
+                        <ul>
+                            <li>We clearly documented API contracts.</li>
+                            <li>Added automated regression tests for existing consumers.</li>
+                            <li>Introduced a versioning strategy for APIs.</li>
+                        </ul>
+                    
+                        <p>It was a great learning experience in terms of how even small changes can affect downstream systems and the
+                            importance of communication and testing before release.</p>
+                    </div>
+                    
+                <div class="question" onclick="toggleAnswer(this)">How do you handle feedback or criticism about your
+                    work?</div>
+                    <div class="answer">
+                        <p>I welcome feedback and see it as an opportunity to improve. Whether it’s positive or constructive, I try to
+                            listen with an open mind and avoid taking it personally. If someone points out an issue in my code or approach,
+                            I first try to understand the reasoning behind it, ask clarifying questions if needed, and reflect on how I can
+                            do better next time.</p>
+                    
+                        <p>For example, during a code review in one of my earlier sprints, a senior developer suggested refactoring my
+                            service class to follow the Single Responsibility Principle. I took the time to understand the design principle,
+                            made the suggested changes, and applied that learning in future implementations.</p>
+                    
+                        <p>Constructive feedback has helped me write cleaner, more maintainable code, and has improved my collaboration
+                            within the team. I believe it’s a key part of professional growth.</p>
+                    </div>
+                                </div>
+
+            <div class="section-title">✅ Team & Communication</div>
+            <div class="qa">
+                <div class="question" onclick="toggleAnswer(this)">How do you collaborate with QA, frontend, DevOps, or
+                    other cross-functional teams?</div>
+                    <div class="answer">
+                        <p>I strongly believe in effective cross-functional collaboration to ensure smooth project delivery. In my current
+                            role, I regularly work with QA, frontend, and DevOps teams throughout the development lifecycle:</p>
+                    
+                        <h3>With QA (Quality Assurance):</h3>
+                        <ul>
+                            <li>I provide early walkthroughs of the feature and share API contracts using Swagger or Postman collections.
+                            </li>
+                            <li>I assist in setting up test data and clarifying expected responses or business logic.</li>
+                            <li>When bugs are reported, I collaborate closely to reproduce, analyze, and resolve them quickly.</li>
+                        </ul>
+                    
+                        <h3>With Frontend Developers:</h3>
+                        <ul>
+                            <li>We align on API contracts — I make sure endpoints, request/response formats, and error handling are
+                                well-documented and consistent.</li>
+                            <li>I support integration testing and help debug issues that may arise during UI-to-API interaction.</li>
+                            <li>In the SmartReg project, I’ve even contributed to Angular components when needed, making collaboration
+                                easier.</li>
+                        </ul>
+                    
+                        <h3>With DevOps:</h3>
+                        <ul>
+                            <li>I prepare deployment-ready code, including Docker configurations and environment properties.</li>
+                            <li>I work with them to set up CI/CD pipelines using Jenkins and monitor logs post-deployment.</li>
+                            <li>During incidents, we coordinate together to quickly rollback or patch deployments.</li>
+                        </ul>
+                    
+                        <h3>With Business Analysts or Product Owners:</h3>
+                        <ul>
+                            <li>I attend sprint planning, grooming sessions, and demos to understand the functional requirements clearly.
+                            </li>
+                            <li>I also provide technical input on feasibility and effort estimation.</li>
+                        </ul>
+                    </div>
+                    
+                <div class="question" onclick="toggleAnswer(this)">How do you ensure smooth communication in a
+                    distributed or remote team?</div>
+                    <div class="answer">
+                        <h3>Communication Practices in a Distributed Team</h3>
+                    
+                        <h4>1. Daily Stand-ups:</h4>
+                        <p>I actively participate in daily stand-up calls to share progress, blockers, and upcoming tasks. It keeps everyone
+                            updated and aligned, fostering collaboration despite being remote.</p>
+                    
+                        <h4>2. Clear and Structured Communication:</h4>
+                        <p>Whether it's emails, Slack messages, or updates in project tracking tools like JIRA, I make sure my messages are
+                            concise, well-structured, and to the point. This helps avoid confusion, especially when working across time
+                            zones.</p>
+                    
+                        <h4>3. Documentation:</h4>
+                        <p>Documentation is a key aspect of distributed work. I document API contracts, feature flows, and configuration
+                            steps using Confluence or shared docs. This reduces the need for repeated clarifications and enables async
+                            collaboration.</p>
+                    
+                        <h4>4. Regular Check-ins:</h4>
+                        <p>For active modules or urgent features, I set up quick sync calls with QA, frontend, or DevOps teams. This ensures
+                            smooth coordination and timely problem resolution.</p>
+                    
+                        <h4>5. Responsiveness and Availability:</h4>
+                        <p>I stay responsive during work hours and keep my calendar updated to manage expectations about my availability. If
+                            I'm unavailable, I leave status updates so team members know my progress and can plan accordingly.</p>
+                    
+                        <h4>6. Using Collaboration Tools Effectively:</h4>
+                        <p>Tools like JIRA, Slack, Microsoft Teams, Google Meet, and Confluence play an essential role in managing
+                            communication, tasks, and documentation effectively across the team.</p>
+                    </div>
+                      
+                    
+                <div class="question" onclick="toggleAnswer(this)">Have you ever handled a conflict within your team?
+                </div>
+                <div class="answer">
+                    <p>Yes, I have handled team-level conflicts in a constructive way.</p>
+                
+                    <p>In one instance, during a sprint in the SmartReg project, a misunderstanding arose between a frontend developer
+                        and a backend teammate over delays in API readiness. The frontend developer assumed the delay was due to backend
+                        negligence, while the backend teammate was waiting for finalized business rules from the BA.</p>
+                
+                    <p>Rather than letting tension grow, I initiated a calm discussion involving both parties. I clarified the actual
+                        blocker — which was incomplete requirements — and suggested a temporary mock API response for the frontend to
+                        continue development. Meanwhile, I coordinated with the business analyst to quickly finalize the rules so we
+                        could deliver the real API on time.</p>
+                
+                    <p>This avoided finger-pointing and helped the team focus on a solution instead of blame. I’ve found that clear
+                        communication, empathy, and staying objective are key to resolving conflicts efficiently.</p>
+                </div>
+                            </div>
+
+            <div class="section-title">✅ Values and Culture Fit</div>
+            <div class="qa">
+                <div class="question" onclick="toggleAnswer(this)">Why do you want to join our company?</div>
+                <div class="answer">[Your answer here]</div>
+
+                <div class="question" onclick="toggleAnswer(this)">Where do you see yourself in the next 2–3 years?
+                </div>
+                <div class="answer">
+                    <p>In the next 2–3 years, I see myself growing into a Senior Developer or Technical Lead role where I can take more
+                        ownership of complex modules, make architectural decisions, and mentor junior developers.</p>
+                
+                    <p>I also want to deepen my expertise in Java, Spring Boot, microservices, and explore areas like cloud technologies
+                        (AWS/Azure) and DevOps practices to contribute across the full development lifecycle. My goal is to not just
+                        write code but to help deliver high-performing, secure, and maintainable solutions that add business value.</p>
+                
+                    <p>At the same time, I want to continue working in a team where I can collaborate, innovate, and learn, while
+                        contributing to impactful projects that solve real user problems.</p>
+                </div>
+                
+                <div class="question" onclick="toggleAnswer(this)">What kind of work environment do you thrive in?</div>
+                <div class="answer">
+                    <p>I thrive in a collaborative and Agile work environment where team members share knowledge, support each other,
+                        and focus on delivering high-quality solutions. I enjoy working in teams where open communication, regular
+                        feedback, and continuous improvement are encouraged.</p>
+                
+                    <p>Since I’ve worked on projects following Scrum methodology, I’m comfortable with daily stand-ups, sprint planning,
+                        and retrospectives — and I find that structure helps me stay productive and aligned with team goals. I also
+                        appreciate a work culture that values ownership and accountability, where developers are trusted to take
+                        responsibility for features from development to deployment.</p>
+                
+                    <p>At the same time, I value an environment that supports learning and innovation, where trying out new tools,
+                        frameworks, or architectural improvements is encouraged.</p>
+                </div>
+                
+                <div class="question" onclick="toggleAnswer(this)">What motivates you the most in your job?</div>
+                <div class="answer">
+                    <p>What motivates me most in my job is the opportunity to solve real-world problems through clean, scalable, and
+                        efficient code. I enjoy building applications and APIs that directly impact users or simplify business processes
+                        — knowing that my work contributes to something meaningful keeps me driven.</p>
+                
+                    <p>I’m also motivated by continuous learning — whether it’s exploring new frameworks like Spring Boot features,
+                        working with tools like Docker or Jenkins, or improving my understanding of design patterns and architecture.
+                        Working on challenging modules or debugging complex issues gives me a sense of achievement.</p>
+                
+                    <p>Lastly, I find motivation in collaborating with a skilled team, sharing ideas, and learning from peers and
+                        seniors. A healthy, feedback-driven environment helps me grow and stay engaged.</p>
+                </div>
+                            </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="section">
+            <div class="section-title">✅ Project/Ownership-Based Questions</div>
+            <div class="qa">
+                <div class="question" onclick="toggleAnswer(this)">What has been your role in the current project from
+                    start to end?</div>
+                    <div class="answer">
+                        <p>In my current project, <strong>SmartReg</strong> — a regulatory compliance platform — I’ve been involved
+                            end-to-end, starting from requirement understanding to deployment.</p>
+                    
+                        <p>In the initial phase, I participated in sprint planning, understood requirements from the product owner, and
+                            worked with the team to break them down into technical tasks.</p>
+                    
+                        <p>I was responsible for designing and developing REST APIs using Java 8 and Spring Boot. I focused on writing
+                            reusable and scalable code following best practices.</p>
+                    
+                        <p>I implemented custom workflows, like multi-step approval processes, and contributed to report generation modules,
+                            including features to clone, modify, and submit reports to regulatory bodies like RBI.</p>
+                    
+                        <p>On the database side, I worked with PostgreSQL to design and optimize queries and handled schema changes where
+                            needed.</p>
+                    
+                        <p>I also supported Angular development for a few modules — especially where backend and frontend needed tight
+                            coordination.</p>
+                    
+                        <p>For CI/CD, I used Jenkins for automated build and deployments, and Docker to containerize services.</p>
+                    
+                        <p>I was involved in unit testing, handled bug fixes, and supported QA during UAT.</p>
+                    
+                        <p>Once deployed, I monitored APIs using logs and tools like Spring Boot Actuator and made quick fixes when needed.
+                        </p>
+                    
+                        <p>Throughout the project, I followed Agile methodology, participated in daily stand-ups, sprint reviews, and
+                            retrospectives.</p>
+                    
+                        <p>Overall, I’ve contributed to all stages of the project — from development and testing to deployment and support —
+                            and worked closely with cross-functional teams.</p>
+                    </div>
+                    
+                <div class="question" onclick="toggleAnswer(this)">Have you taken ownership of any feature/module
+                    independently?</div>
+                    <div class="answer">
+                        <p>Yes, I’ve taken complete ownership of several features in my current project, <strong>SmartReg</strong>. One key
+                            example was the <strong>Report Clone module</strong>.</p>
+                    
+                        <p>In this feature, I was responsible for:</p>
+                        <ul>
+                            <li>Understanding the business requirement of allowing users to duplicate existing regulatory reports to create
+                                a new version with slight modifications.</li>
+                            <li>Designing and developing the backend logic using Java 8 and Spring Boot, ensuring that all dependent data —
+                                like rules, validations, and approval statuses — were properly cloned without breaking the original report's
+                                integrity.</li>
+                            <li>Creating REST APIs to fetch, modify, and save cloned report data.</li>
+                            <li>Implementing exception handling for scenarios like missing references, null data, or invalid report states.
+                            </li>
+                            <li>Coordinating with the frontend team to integrate this feature using Angular and ensuring smooth UI/API flow.
+                            </li>
+                            <li>Writing unit tests and participating in peer reviews to ensure quality.</li>
+                            <li>Handling deployment of this feature through Jenkins and monitoring its performance post-release.</li>
+                        </ul>
+                    
+                        <p>Taking ownership of this feature helped me strengthen my skills in requirement analysis, technical design,
+                            coding, testing, and production support, all while collaborating closely with QA and product teams.</p>
+                    </div>
+                    
+                <div class="question" onclick="toggleAnswer(this)">How do you ensure code quality and maintainability in
+                    your team?</div>
+                    <div class="answer">
+                        <p>Ensuring code quality and maintainability is a continuous process, and I follow several practices both
+                            individually and within the team:</p>
+                    
+                        <ul>
+                            <li><strong>Clean Code Principles:</strong> I follow best practices like meaningful naming, modular methods,
+                                proper exception handling, and avoiding code duplication.</li>
+                    
+                            <li><strong>Code Reviews:</strong> We conduct peer reviews for every merge request. I not only review others’
+                                code but also welcome suggestions on mine. Reviews help catch potential bugs early and encourage knowledge
+                                sharing.</li>
+                    
+                            <li><strong>Adherence to Standards:</strong> We follow common coding standards and architecture patterns, like
+                                layered architecture and SOLID principles, to keep the codebase consistent and maintainable.</li>
+                    
+                            <li><strong>Unit Testing:</strong> I write unit tests for my services using JUnit and Mockito, which ensures the
+                                code works as expected and gives confidence during refactoring.</li>
+                    
+                            <li><strong>Static Code Analysis:</strong> Tools like SonarQube or Lint help identify code smells, potential
+                                bugs, and maintainability issues early in the CI pipeline.</li>
+                    
+                            <li><strong>Refactoring:</strong> I proactively refactor legacy or bulky code when needed — for example,
+                                breaking large methods into smaller, reusable ones, or simplifying nested logic.</li>
+                    
+                            <li><strong>Documentation and Comments:</strong> I document complex logic where necessary, and maintain API
+                                documentation using tools like Swagger, so the code is easy to understand for others.</li>
+                    
+                            <li><strong>Agile Practices:</strong> Regular sprint reviews and retrospectives help us assess not just delivery
+                                but also our technical practices and improve continuously.</li>
+                        </ul>
+                    
+                        <p>These steps collectively help maintain a high-quality, scalable, and easy-to-maintain codebase.</p>
+                    </div>
+                    
+                <div class="question" onclick="toggleAnswer(this)">Have you been involved in client communications or
+                    requirement gathering?</div>
+                    <div class="answer">
+                        <p>Yes, I have been involved in client communication and requirement gathering, especially during the initial phases
+                            of new modules or features.</p>
+                    
+                        <p>In the SmartReg project, for example, I regularly joined meetings with business analysts and sometimes directly
+                            with client-side stakeholders to understand the regulatory requirements for compliance report generation. These
+                            sessions helped clarify:</p>
+                    
+                        <ul>
+                            <li>What rules needed to be applied for different types of financial institutions,</li>
+                            <li>The structure and format expected in reports,</li>
+                            <li>And edge cases like report versioning or conditional validations.</li>
+                        </ul>
+                    
+                        <p>I actively took notes, asked questions to resolve technical ambiguities, and collaborated with my team to break
+                            down the requirements into development tasks.</p>
+                    
+                        <p>This direct involvement helped reduce rework, improved the accuracy of delivered features, and made it easier to
+                            design APIs that aligned with user expectations.</p>
+                    
+                        <p>While I may not lead the discussions, I’m confident in client-facing roles and understand the importance of clear
+                            communication in delivering the right solution.</p>
+                    </div>
+                                </div>
+
+            <div class="section-title">✅ Managerial/Leadership Skills</div>
+            <div class="qa">
+                <div class="question" onclick="toggleAnswer(this)">How do you manage pressure from multiple
+                    stakeholders?</div>
+                    <div class="answer">
+                        <p>When working with multiple stakeholders, it’s important to stay organized, communicate transparently, and
+                            prioritize based on impact and deadlines.</p>
+                    
+                        <p>In my current role, I often receive inputs from product owners, QA, and sometimes even DevOps — especially close
+                            to release cycles. To manage this pressure:</p>
+                    
+                        <ul>
+                            <li>I prioritize based on business impact and urgency, often using tools like JIRA to track and categorize
+                                tasks.</li>
+                            <li>I communicate early — if I see a conflict in timelines or feasibility, I proactively inform the stakeholders
+                                and suggest alternatives or phased delivery.</li>
+                            <li>I break down large tasks into smaller deliverables, which helps show consistent progress and reduces
+                                last-minute stress.</li>
+                            <li>I stay calm under pressure and focus on solving problems rather than getting overwhelmed.</li>
+                        </ul>
+                    
+                        <p>For example, in the SmartReg project, just before a compliance deadline, we had last-minute changes from the
+                            client along with a critical bug reported by QA. I discussed timelines with my team lead, isolated the issues,
+                            and worked with DevOps for a quick hotfix while scheduling the enhancements in the next sprint.</p>
+                    
+                        <p>By managing expectations clearly and working collaboratively, I was able to deliver without compromising quality.
+                        </p>
+                    </div>
+                      
+                <div class="question" onclick="toggleAnswer(this)">Have you contributed to sprint planning, estimations,
+                    or retrospectives?</div>
+                    <div class="answer">
+                        <p>Yes, I’ve been actively involved in sprint ceremonies including planning, estimations, and retrospectives as part
+                            of Agile development.</p>
+                    
+                        <p>In sprint planning, I contribute by breaking down tasks into technical subtasks and providing realistic time
+                            estimates based on complexity, dependencies, and team capacity. I often refer to past sprints and similar
+                            modules to give better estimates, especially for backend API or integration work.</p>
+                    
+                        <p>For example, during the SmartReg project, I estimated effort for new report generation modules and identified
+                            reusable components, which helped us plan better and avoid duplication of effort.</p>
+                    
+                        <p>In retrospectives, I openly share what went well and what could be improved. For instance, I once suggested
+                            implementing early code reviews in the sprint to avoid last-minute merge issues — and that feedback was later
+                            adopted by the team.</p>
+                    
+                        <p>Being part of these ceremonies helps ensure better planning, smoother execution, and continuous improvement in
+                            the development process.</p>
+                    </div>
+                      
+                <div class="question" onclick="toggleAnswer(this)">If you're assigned a new technology you're unfamiliar
+                    with, how would you approach learning it?</div>
+                    <div class="answer">
+                        <p>If I’m assigned a new technology that I’m not familiar with, I approach it with a structured and hands-on
+                            mindset.</p>
+                    
+                        <p><strong>Understand the context</strong> – I start by understanding why the technology is being used, how it fits
+                            into the project architecture, and what problem it's solving. This gives me direction and purpose while
+                            learning.</p>
+                    
+                        <p><strong>Official documentation & tutorials</strong> – I first refer to official docs and reliable tutorials to
+                            get a strong foundation on core concepts, setup, and best practices.</p>
+                    
+                        <p><strong>Hands-on practice</strong> – I prefer building a small POC (proof of concept) to explore the key
+                            features. This helps me learn faster and discover real-time challenges.</p>
+                    
+                        <p><strong>Ask team members</strong> – If needed, I reach out to experienced teammates or explore internal project
+                            references to understand implementation standards.</p>
+                    
+                        <p><strong>Time management</strong> – I allocate focused learning time outside of work hours when required,
+                            especially during initial ramp-up.</p>
+                    
+                        <p>For example, when I had to contribute to Angular components in the SmartReg project, I had limited experience
+                            initially. So I followed this approach — explored the component structure, understood data binding, and
+                            practiced form handling with a small demo. Within a few days, I was able to take ownership of UI features and
+                            integrate them with backend APIs.</p>
+                    </div>
+                      
+                <div class="question" onclick="toggleAnswer(this)">How do you balance speed and quality in software
+                    delivery?</div>
+                    <div class="answer">
+                        <p>Balancing speed and quality is crucial in delivering software that meets both deadlines and customer
+                            expectations. To achieve this, I follow a few key strategies:</p>
+                    
+                        <p><strong>Define clear requirements early</strong> – Before starting, I ensure that requirements are well
+                            understood, clear, and aligned with stakeholders. This avoids rework or unnecessary changes later on.</p>
+                    
+                        <p><strong>Adopt Agile practices</strong> – By working in sprints, we can deliver small, manageable increments of
+                            the product, which helps focus on high-priority features and fixes. This also allows us to adjust the scope or
+                            approach based on early feedback.</p>
+                    
+                        <p><strong>Implement automated testing</strong> – Automation tools for unit tests, integration tests, and end-to-end
+                            tests help us maintain a high standard of quality while speeding up the development process. I ensure that
+                            testing is a priority at each stage of development.</p>
+                    
+                        <p><strong>Code reviews and pair programming</strong> – Regular code reviews help catch bugs or architectural issues
+                            early, ensuring that we maintain quality without slowing down the process. Sometimes, I use pair programming for
+                            critical sections, which leads to faster problem-solving.</p>
+                    
+                        <p><strong>Continuous integration and deployment (CI/CD)</strong> – Using tools like Jenkins for CI/CD ensures that
+                            our code is always tested and deployed to a staging environment quickly. This minimizes issues in production and
+                            speeds up delivery.</p>
+                    
+                        <p><strong>Focus on incremental improvements</strong> – Instead of delivering the entire solution in one go, I break
+                            down tasks into smaller, prioritized features. This allows us to release value quickly while maintaining a high
+                            standard of quality.</p>
+                    
+                        <p>For example, in the SmartReg project, we had a tight deadline for compliance reports. We used Agile sprints to
+                            break down tasks and focused on core features first, with continuous testing and reviews. By automating
+                            regression tests and deploying to staging frequently, we maintained quality without delaying delivery.</p>
+                    
+                        <p>Ultimately, I balance speed and quality by managing the scope, focusing on key features, and using best practices
+                            for testing and deployment. This ensures that we meet deadlines while delivering stable and reliable software.
+                        </p>
+                    </div>
+                                  </div>
+
+            <div class="section-title">✅ Light Tech Talk (High-Level)</div>
+            <div class="qa">
+                <div class="question" onclick="toggleAnswer(this)">Which tech stack are you most confident in, and why?
+                </div>
+                <div class="answer">
+                    <p>I’m most confident working with the Java-based backend tech stack, especially with Java 8, Spring Boot, RESTful
+                        APIs, Hibernate, and PostgreSQL or MySQL as the database.</p>
+                
+                    <p>I’ve been using this stack consistently across all my major projects for over 4 years — including
+                        <strong>SmartReg</strong>, <strong>ICICI CPS</strong>, and <strong>Nexus</strong>. I’ve built and maintained
+                        REST APIs, implemented business logic using Spring Boot services, secured endpoints using Spring Security, and
+                        handled database operations using Hibernate and JPA.</p>
+                
+                    <p>I’m also confident in CI/CD integration using Jenkins, and containerization with Docker, which ensures smooth
+                        deployment cycles. On the frontend side, I’ve worked with Angular as well, and I can contribute when full-stack
+                        support is needed.</p>
+                
+                    <p>This stack allows me to build scalable, maintainable, and secure applications effectively, and because I’ve
+                        worked on real-world use cases like regulatory reporting and credit processing, I’ve gained hands-on experience
+                        in debugging, performance optimization, and end-to-end delivery — which makes me very comfortable with it.</p>
+                </div>
+                  
+                <div class="question" onclick="toggleAnswer(this)">Can you explain the architecture of your recent
+                    project?</div>
+                    <div class="answer">
+                        <p>Yes, I’d be happy to explain the architecture of my recent project, <strong>SmartReg</strong>, which is a
+                            cloud-based regulatory compliance platform developed for financial institutions.</p>
+                    
+                        <h4>High-Level Architecture:</h4>
+                    
+                        <p><strong>Architecture Style:</strong><br>
+                            We used a <strong>microservices-based architecture</strong> built using Spring Boot. Each module (such as report
+                            generation, approval workflow, rule validation, etc.) was handled by a separate microservice.</p>
+                    
+                        <h4>Backend:</h4>
+                        <ul>
+                            <li>Developed using Java 8, Spring Boot, and Spring MVC.</li>
+                            <li>Each microservice exposed RESTful APIs for communication.</li>
+                            <li>Used Spring Security with JWT tokens to secure the endpoints.</li>
+                        </ul>
+                    
+                        <h4>Frontend:</h4>
+                        <ul>
+                            <li>Built using Angular (version 12).</li>
+                            <li>Consumed REST APIs exposed by the backend.</li>
+                            <li>Handled dynamic form rendering based on report type and user permissions.</li>
+                        </ul>
+                    
+                        <h4>Database:</h4>
+                        <ul>
+                            <li>PostgreSQL used for data storage.</li>
+                            <li>Each service managed its own schema following Domain-Driven Design (DDD).</li>
+                            <li>Audit logs and workflow data stored in dedicated tables.</li>
+                        </ul>
+                    
+                        <h4>Workflow Engine:</h4>
+                        <ul>
+                            <li>Implemented a custom 3-step approval workflow (Maker → Checker → Reviewer).</li>
+                            <li>Configurable and role-based.</li>
+                        </ul>
+                    
+                        <h4>DevOps and Deployment:</h4>
+                        <ul>
+                            <li>Docker used to containerize services, with Docker Compose in non-prod environments.</li>
+                            <li>Jenkins handled CI/CD: builds, tests, and deployments.</li>
+                            <li>Services deployed in a cloud-based environment, monitored via Spring Boot Actuator and logs.</li>
+                        </ul>
+                    
+                        <h4>Authentication/Authorization:</h4>
+                        <ul>
+                            <li>User roles managed via Spring Security.</li>
+                            <li>JWT tokens issued upon login for secure access control.</li>
+                        </ul>
+                    
+                        <h4>Inter-Service Communication:</h4>
+                        <ul>
+                            <li>Mainly RESTful.</li>
+                            <li>Used asynchronous event-driven handling in some scenarios.</li>
+                        </ul>
+                    
+                        <p><strong>Why This Architecture?</strong><br>
+                            This architecture was chosen for its scalability, modularity, and clear separation of concerns. Since SmartReg
+                            serves multiple financial clients with configurable rules and validations, microservices offered the flexibility
+                            and isolation required for continuous delivery.</p>
+                    </div>
+                      
+                <div class="question" onclick="toggleAnswer(this)">What challenges did you face while working with
+                    microservices?</div>
+                    <div class="answer">
+                        <p>While working with microservices in the <strong>SmartReg</strong> project, I encountered several challenges,
+                            including:</p>
+                    
+                        <h4>1. Service Communication & Dependency Management:</h4>
+                        <p>One of the main challenges was handling inter-service communication efficiently. For example, when the reporting
+                            service needed data from the validation and workflow services, we had to ensure APIs were always available and
+                            responsive. To address this:</p>
+                        <ul>
+                            <li>We designed clear contracts and fallback logic.</li>
+                            <li>Implemented timeout settings and proper exception handling to avoid cascading failures.</li>
+                        </ul>
+                    
+                        <h4>2. Data Consistency:</h4>
+                        <p>Each service had its own database schema (as per Domain-Driven Design). This led to eventual consistency
+                            challenges, especially in workflows where multiple services had to act in sequence (e.g., validation → approval
+                            → report submission). To solve this:</p>
+                        <ul>
+                            <li>We used transaction logs and ensured updates were processed in the correct order.</li>
+                            <li>In critical cases, we built compensating transactions.</li>
+                        </ul>
+                    
+                        <h4>3. Debugging and Tracing Across Services:</h4>
+                        <p>When an issue occurred, it wasn’t always clear which service failed. So we:</p>
+                        <ul>
+                            <li>Enabled centralized logging using log aggregators.</li>
+                            <li>Used unique request IDs passed between services for better tracing.</li>
+                        </ul>
+                    
+                        <h4>4. Deployment and Configuration:</h4>
+                        <p>Managing multiple services meant keeping their configurations consistent across environments. To manage this:</p>
+                        <ul>
+                            <li>We used Docker and Docker Compose for local development.</li>
+                            <li>Ensured centralized config management using environment variables and profiles.</li>
+                        </ul>
+                    
+                        <h4>5. Version Compatibility:</h4>
+                        <p>As multiple services were developed and deployed independently, there were instances where one service’s API
+                            change broke another. We mitigated this by:</p>
+                        <ul>
+                            <li>Following strict API versioning.</li>
+                            <li>Using Swagger for documentation and automated contract validation during CI builds.</li>
+                        </ul>
+                    
+                        <p>In short, microservices gave us flexibility and scalability, but required strong discipline in design, logging,
+                            and deployment practices — all of which I actively contributed to during the SmartReg project.</p>
+                    </div>
+                      
+                <div class="question" onclick="toggleAnswer(this)">How do you ensure the security of your APIs?</div>
+<div class="answer">
+    <h3>Security Practices in the SmartReg Project</h3>
+
+    <h4>1. Authentication and Authorization:</h4>
+    <p>We used <strong>Spring Security</strong> along with <strong>JWT</strong> (JSON Web Tokens).</p>
+    <p>After a successful login, a JWT token is issued to the user, and this token must be included in the headers for
+        all secured API requests. Role-based access control (RBAC) was applied to ensure that users could only access
+        resources allowed by their roles (e.g., Maker, Checker, Reviewer).</p>
+
+    <h4>2. Input Validation and Sanitization:</h4>
+    <p>Validations were performed both at the controller and service layer using annotations like <code>@Valid</code>,
+        <code>@NotNull</code>, etc.</p>
+    <p>We prevented injection attacks (like SQL injection or XSS) by using parameterized queries in Hibernate and
+        avoiding direct user inputs in queries.</p>
+
+    <h4>3. HTTPS and Secure Headers:</h4>
+    <p>All APIs were deployed behind <strong>HTTPS</strong> to encrypt data in transit. We also added security headers
+        (like <code>X-Content-Type-Options</code>, <code>X-Frame-Options</code>, etc.) in responses to mitigate common
+        web vulnerabilities.</p>
+
+    <h4>4. Rate Limiting and Throttling (planned/future-ready):</h4>
+    <p>To avoid brute-force attacks and DoS, we had designs in place for implementing rate limiting using tools like API
+        Gateway or filters.</p>
+
+    <h4>5. Audit Logging and Monitoring:</h4>
+    <p>User actions and API access were logged in audit tables. Logs were monitored for unauthorized access patterns or
+        anomalies using log aggregators.</p>
+
+    <h4>6. Exception Handling and Masking Sensitive Data:</h4>
+    <p>Centralized exception handling using <code>@ControllerAdvice</code> was implemented to ensure stack traces or
+        sensitive errors are not exposed to clients. We returned only generic messages in error responses while logging
+        the actual error details internally.</p>
+
+    <p>In short, API security is a layered approach — we ensured it through proper authentication, authorization, data
+        validation, secure communication, and ongoing monitoring.</p>
+</div>
+
+                <div class="question" onclick="toggleAnswer(this)">What is your approach to logging, monitoring, or
+                    debugging issues in production?</div>
+<div class="answer">
+    <h3>Logging and Monitoring Practices in the SmartReg Project</h3>
+
+    <h4>1. Structured Logging:</h4>
+    <p>We use <strong>SLF4J</strong> with <strong>Logback</strong> for consistent and readable logging.</p>
+    <p>Logs are structured with unique request IDs, timestamps, log levels (INFO, DEBUG, ERROR), and context (like user
+        ID or module name).</p>
+    <p>For sensitive data, we ensure masking before logging.</p>
+
+    <h4>2. Log Levels and Categories:</h4>
+    <p>I configure appropriate log levels — keeping DEBUG for local/dev, and INFO/ERROR for production.</p>
+    <p>In case of exceptions, we always log the root cause (<code>e.getMessage()</code> and stack trace), which helps
+        during debugging.</p>
+
+    <h4>3. Centralized Logging:</h4>
+    <p>All logs are collected centrally using log aggregators (like <strong>ELK stack</strong> — Elasticsearch,
+        Logstash, Kibana) or Fluentd with a dashboard.</p>
+    <p>This allows the team to search logs across services, filter by user ID, and identify issues quickly.</p>
+
+    <h4>4. Monitoring Tools:</h4>
+    <p>We use <strong>Spring Boot Actuator</strong> for health checks and endpoint monitoring.</p>
+    <p>Dockerized services have built-in health check scripts, which are also monitored by the deployment environment
+        (like Jenkins/Kubernetes).</p>
+
+    <h4>5. Alerting & Notifications:</h4>
+    <p>For critical errors or service downtimes, we configure alerts via email or Slack using monitoring tools.</p>
+    <p>This ensures we're immediately aware of any production issues.</p>
+
+    <h4>6. Debugging in Production:</h4>
+    <p>We never debug directly in production but use:</p>
+    <ul>
+        <li>Detailed logs</li>
+        <li>Audit trails</li>
+        <li>Test case recreation in staging environments</li>
+    </ul>
+    <p>If needed, we simulate production data in lower environments to reproduce and fix issues safely.</p>
+
+    <h4>Example:</h4>
+    <p>Once in SmartReg, we had a report generation issue that wasn't reproducible in dev. By using the trace ID from
+        logs, we correlated API calls and discovered that a null value from a dependent service caused a failure. The
+        issue was resolved and we added a null check with a fallback value in the service layer.</p>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+
+</html>
